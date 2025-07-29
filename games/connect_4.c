@@ -48,7 +48,7 @@ int main(void)
     //current column
     int dropColumn=0;
 
-    //how many in a row
+    //how many in a row currently detected
     short inARow=0;
 
 
@@ -105,6 +105,7 @@ int main(void)
                 {
                     printf("   ");
 
+                    //This prints the pieces
                     if(board[y][x]=='X')
                     {
                         if(p==1 || p==3)
@@ -155,7 +156,7 @@ int main(void)
             dropColumn = atoi(dropColumnStr);
             dropColumn--;
 
-            if(dropColumn==5708)
+            if(dropColumn==5709)
             {
                 printf("GAME STOPPED\n\n");
                 return 0;
