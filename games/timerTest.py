@@ -2,11 +2,11 @@
 #First use of timing functions and f-strings.
 #Specifically designed to destroy your sanity.
 
+import sys
 from time import perf_counter
-import numpy #YOU TYPE THAT SUCKER OUT EVERY TIME YOU CALL NUMPY FUNCTIONS! NO "np..." LAZINESS!!!
 
 #Tests the timer and provides an example of the perf_counter()
-def timerTest() -> None:
+def checkTimer() -> None:
     #take a perf_counter reading at the beginning of the program. perf_counter gives arbitrary values, so a start and end time are needed to determine total program runtime
     startTime=perf_counter();
     print(f"Program started at T={startTime}. ", end='');
@@ -32,33 +32,33 @@ def printQuestion(qn:int, maxLength:int) -> None:
 
     if qn<=0 or qn>maxLength:
         print("ERROR: CHECK ARRAY INDEXING!");
-
+    
     elif qn==1:
-        print("Wicked claims that they are the ____ most popular musical on Broadway.");
-        print(" a. 1st")
-        print(" b. 2nd")
-        print(" c. 3rd")
-        print(" d. 4th")
-        print(" e. 5th")
+        print("Clicking on the Wicked logo at the top-center of the screen takes you to which subpage?");
+        print(" a. The website's home page")
+        print(" b. FAQ")
+        print(" c. Plan Your Visit")
+        print(" d. Shop")
+        print(" e. Tickets")
 
     elif qn==2:
-        print("""Excluding the logo link at the top, how many drop-down menus are there on the top side of the website? (Hint: One of them is labeled "The Show")""")
-        print(" a. 3")
-        print(" b. 5")
-        print(" c. 8")
-        print(" d. 9")
-        print(" e. 15")
-
-    elif qn==3:
-        print("How many people are on the image on the home page?");
+        print("How many images are on the main page?")
         print(" a. 0")
         print(" b. 1")
         print(" c. 2")
         print(" d. 3")
-        print(" e. 4")
+        print(" e. 4 or more")
+
+    elif qn==3:
+        print("The home page allows you to see seat availability for the next ______.");
+        print(" a. 1 day")
+        print(" b. 3 days")
+        print(" c. 1 week")
+        print(" d. 1 month")
+        print(" e. 3 months")
 
     elif qn==4:
-        print("""The pop-up text input on the (bottom) right of the webpage is called "_______".""");
+        print("""When hidden, the pop-up text input on the (bottom) right of the webpage is called "_______".""");
         print(" a. Q&A")
         print(" b. Buy Tickets")
         print(" c. AI Agent Chat")
@@ -71,15 +71,15 @@ def printQuestion(qn:int, maxLength:int) -> None:
         print(" b. 35th")
         print(" c. 44th")
         print(" d. 51st")
-        print(" e. 53rd")
+        print(" e. 54th")
 
     elif qn==6:
-        print("Clicking on the Wicked logo at the top-center of the screen takes you to which subpage?");
-        print(" a. Tickets")
-        print(" b. The Show")
-        print(" c. Plan Your Visit")
-        print(" d. Shop")
-        print(" e. (The website's home page)")
+        print("Wicked on Broadway's official ticketing service is ______.");
+        print(" a. TKM")
+        print(" b. Ticketmaster")
+        print(" c. TodayTix")
+        print(" d. Nederlander Group")
+        print(" e. Broadway Direct")
 
     elif qn==7:
         print("How many major themes are listed in the Linguification Library?");
@@ -90,12 +90,12 @@ def printQuestion(qn:int, maxLength:int) -> None:
         print(" e. 4")
 
     elif qn==8:
-        print("Does the Broadway performance offer discounts (subject to availability) upon presentation of a valid military ID?");
-        print(" a. Yes")
-        print(" b. Yes, except for Saturday evening performances")
-        print(" c. No, except for afternoon performances")
-        print(" d. No, except for Saturday evening performances")
-        print(" e. No")
+        print("The Broadway performance offers its military rate on which days?");
+        print(" a. Monday-Thursday")
+        print(" b. Tuesday-Thursday")
+        print(" c. Wednesday-Friday")
+        print(" d. Weekdays")
+        print(" e. Every day")
 
     elif qn==9:
         print("Which language does the website NOT support?");
@@ -104,38 +104,39 @@ def printQuestion(qn:int, maxLength:int) -> None:
         print(" c. French")
         print(" d. Korean")
         print(" e. Japanese")
-
+    
     elif qn==10:
-        print("When entered into the website's chatbot, which word will cause the chatbot to display the contents of a JSON file?");
-        print(" a. hello")
-        print(" b. cast")
-        print(" c. price")
-        print(" d. bye")
-        print(" e. cd")
-
-    elif qn==11:
-        print("Audien Translation System devices are available for $____ on the second level of the theatre.");
+        print("Audien translator devices are available for $____.");
         print(" a. 0")
         print(" b. 5")
         print(" c. 7.50")
         print(" d. 10")
         print(" e. 15")
 
+    elif qn==11:
+        print("Which of the following social media platforms do NOT have links on the website?");
+        print(" a. Facebook")
+        print(" b. TikTok")
+        print(" c. Instagram")
+        print(" d. Snapchat")
+        print(" e. YouTube")
+
+
     elif qn==12:
         print("Which service or company is responsible for the website's AI chatbot?");
-        print(" a. Google")
+        print(" a. Google Gemini")
         print(" b. AWS")
-        print(" c. GPT-3 direct UI")
+        print(" c. GPT-4o")
         print(" d. Background Intelligent Transfer Service")
         print(" e. Satisfi Labs")
 
     elif qn==13:
-        print("In NBCUniversal's Privacy Policy, which of the categories of personal information is NBCUniversal NOT permitted to collect?");
-        print(" a. Microphone feed")
-        print(" b. IP addresses")
-        print(" c. Ads viewed")
-        print(" d. Emails opened")
-        print(" e. Partially completed forms")
+        print("In NBCUniversal's Privacy Policy, which of the following groups may NOT receive your browsing data directly from NBCUniversal?");
+        print(" a. Search engines")
+        print(" b. Partner websites")
+        print(" c. Advertising companies")
+        print(" d. Police departments")
+        print(" e. Social media platforms")
 
 
     elif qn==14:
@@ -147,12 +148,12 @@ def printQuestion(qn:int, maxLength:int) -> None:
         print(" e. Edward (Three months old)")
 
     elif qn==15:
-        print("You can purchase a Wicked London gift card starting at ____ British pounds.");
-        print(" a. 10")
-        print(" b. 20")
-        print(" c. 30")
-        print(" d. 50")
-        print(" e. 5")
+        print("You can purchase a Wicked London gift card for a minimum amount of ____ British pounds.");
+        print(" a. 5")
+        print(" b. 10")
+        print(" c. 15")
+        print(" d. 20")
+        print(" e. 25")
 
 
 #also cursed, but keeps the main function uncluttered
@@ -181,9 +182,10 @@ def setDifficultyInfo(qn:int, currentDifficulty:int) -> int:
 def main() -> int:
     startTime=0;
     stopTime=0;
+    ANSWER_TIME = 60 #in seconds
 
-    #                                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15
-    correctAnswers=numpy.array([-127, 1, 4, 3, 4, 4, 5, 1, 2, 2, 3, 4, 5, 1, 2, 2], dtype=numpy.int8); #index 0 is a space filler to start at index 1
+    #        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15
+    answers=[2, 1, 4, 3, 4, 4, 5, 1, 2, 2, 1, 4, 5, 1, 2, 2]
 
     inputtedAnswer=chr(0);
 
@@ -192,7 +194,7 @@ def main() -> int:
     score=0;
 
     #print the rules
-    print("wickedthemusical.com IMPOSSIBLE TEST")
+    print("wickedthemusical.com impossible test")
     input("Press Enter to view the rules")
 
     print("")
@@ -200,7 +202,7 @@ def main() -> int:
     print("There are a total of 15 questions. Each question has five possible answers. Type one of the choices (a, b, c, d, e), then press Enter to submit your answer.")
     print("Each question has exactly one correct answer.")
     print("")
-    print("For each question, you have 15 seconds to answer. Taking longer than 15 seconds will forfeit your points.")
+    print(f"For each question, you have {ANSWER_TIME} seconds to answer. Taking longer than {ANSWER_TIME} seconds will forfeit your points.")
     print("You will be prompted to press Enter before each question. Time starts when you press Enter.")
     print("You may use the website to help you.")
     print("")
@@ -235,9 +237,9 @@ def main() -> int:
     stopTime=perf_counter();
 
     #compare timer and answer results, print the response
-    if stopTime-startTime > 15:
-        print("Too slow. ", end='');
-        if not inputtedAnswer==1:
+    if stopTime-startTime > ANSWER_TIME:
+        print(f"You were {round(stopTime-startTime - ANSWER_TIME, 2)} seconds too slow. ", end='');
+        if not inputtedAnswer==3:
             print(f"The correct answer is C");
         else:
             print("");
@@ -258,10 +260,10 @@ def main() -> int:
 
 
     #do the test
-    for i in range(1, len(correctAnswers)):
+    for i in range(1, len(answers)):
 
         print("");
-        input("Press Enter when you're ready for the next question. The 15-second timer starts after you press Enter.");
+        input(f"Press Enter when you're ready for the next question. The {ANSWER_TIME}-second timer starts after you press Enter.");
         #print a billion newlines so the test taker can't see the previous questions
         for p in range(500):
             print("");
@@ -271,13 +273,18 @@ def main() -> int:
         print("");
 
         #display current question
-        printQuestion(i, len(correctAnswers));
+        printQuestion(i, len(answers));
 
         #start timer
         startTime=perf_counter();
 
         #ask user for letter input
-        inputtedAnswer=input("Type answer here, then press Enter to submit: ");
+        inputtedAnswer = ''
+        try:
+            inputtedAnswer=input("Type answer here, then press Enter to submit: ");
+        except (KeyboardInterrupt, EOFError) as e:
+            print("\ncoward")
+            sys.exit(-1)
 
         #check if inputtedAnswer is filled. if not, set to a bogus answer. if so, convert to lowercase letter
         if len(inputtedAnswer) <= 0:
@@ -292,15 +299,15 @@ def main() -> int:
         stopTime=perf_counter();
 
         #compare timer and answer results, print the response
-        if stopTime-startTime > 15:
-            print("Too slow. ", end='');
-            if not inputtedAnswer==correctAnswers[i]:
-                print(f"The correct answer is {chr(correctAnswers[i]+64)}");
+        if stopTime-startTime > ANSWER_TIME:
+            print(f"You were {round(stopTime-startTime - ANSWER_TIME, 2)} seconds too slow. ", end='');
+            if not inputtedAnswer==answers[i]:
+                print(f"The correct answer is {chr(answers[i]+64)}");
             else:
                 print("");
 
-        elif not inputtedAnswer==correctAnswers[i]:
-            print(f"Incorrect. The correct answer is {chr(correctAnswers[i]+64)}.")
+        elif not inputtedAnswer==answers[i]:
+            print(f"Incorrect. The correct answer is {chr(answers[i]+64)}.")
         else:
             print(f"Correct! +{difficulty-1}")
             score=score + difficulty-1;
@@ -318,7 +325,7 @@ def main() -> int:
     elif 9<score<=21:
         print("You did great. Rejoicify!")
     elif 21<score<41:
-        print("HOLY F**K! You defied gravity!")
+        print("WOW! You defied gravity!")
     else:
         print("You cheated! Admit it!")
 

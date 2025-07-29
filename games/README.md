@@ -9,12 +9,12 @@ On their turn, players select a column to drop their pieces in by entering a col
 
 The game automatically detects if a player achieved a win. If all the board spaces are taken, the game is declared a tie.
 
-2023-03-25
+Finished 2023-03-25
 
 
 ### Timer Test
 A 15-question quiz about the contents of the [Wicked the Musical website](https://wickedthemusical.com/). The test requires no knowledge of Wicked the Musical.
 
-Players have 15 seconds to answer each multiple-choice question. If the player enters an answer after 15 seconds, no credit is given, even if the answer is correct.
+Players have 60 seconds to answer each multiple-choice question. If the player enters an answer after 60 seconds, no credit is given, even if the answer is correct.
 
-2023-07-23
+Finished 2023-07-23, updated 2025-07-29
